@@ -13,9 +13,7 @@ export default defineConfig({
     },
     allowedHosts: [
       "localhost",
-      "alliance-solutions-u5fm.onrender.com",
-      "alliance-solutions.onrender.com",
-      "alliance-solutions-1.onrender.com/"
+      "forge-ai-frontend-v0ko.onrender.com"
     ],
     proxy: {
       '/api': {
