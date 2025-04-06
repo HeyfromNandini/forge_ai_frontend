@@ -38,9 +38,13 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
+          axios: ['axios']
         }
       }
     }
+  },
+  optimizeDeps: {
+    include: ['axios']
   },
   define: {
     'process.env.VITE_DEBUG': JSON.stringify(process.env.VITE_DEBUG)
