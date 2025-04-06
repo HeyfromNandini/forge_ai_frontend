@@ -1,5 +1,4 @@
 // @ts-ignore
-import axios from 'axios';
 import {Agent, AgentResponse} from '../types/agent';
 import {AIWorkflow, Workflow, WorkflowResponse} from '../types/workflow';
 
@@ -29,6 +28,7 @@ export class ApiService {
     static async getAgentById(agentId: string): Promise<Agent> {
         try {
             const response = await apiClient.get<AgentResponse>(`/agents/${agentId}`);
+            // @ts-ignore
             return response.data; // Adjust this based on your API response structure
         } catch (error) {
             console.error(`Error fetching agent with ID ${agentId}:`, error);
